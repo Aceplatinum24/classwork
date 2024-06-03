@@ -582,50 +582,57 @@
 # print(f"You will be {agein10yrs} years old in 10 years.")
 
 # age = int(input("How old are you? "))
-# if age = <21:
+# if age < 21:
 #     print("You can't drink alocohol in the US yet.")
 # else:
+#     print("You are legally allowed to drink. Drink Responsibly!")
+
+# age = int(input("How old are you? "))
+# sober = 21 - age
+# drink = age - 21
+# if age < 21:
+#     print(f"You can't drink alocohol in the US for another {sober} years.")
+# else:
+#     print(f"""You are legally allowed to drink for the past {drink} years. 
+#           Drink Responsibly!""")
     
+# birthyear = int(input("When were you born? "))
+# if birthyear < 2000:
+#     print("You were born before 2000.")
+# elif birthyear == 2000:
+#     print("You were born in the year 2000. ")
+# else:
+#     print("You were born after the year 2000. ")
 
+# name = input("What is your name? ")
+# print("Ok, let me look up that name...")
 
-##########################################################
-##ANNOYING NUMBER GAME##
+# if name.lower() == "jacob":
+#     print("That name used to be common, I think.")
+# elif name.lower() == "sue":
+#     print("Your name also refers to a legal action.")
+# elif name.lower() == "jake":
+#     print("Well she sounds hideous!")
+# else:
+#     print("That's my purse, I don't know you!")
 
-#time data
-import time
-def delay_print(s):
-    for c in s:
-        print(c, end="", flush=True)
-        time.sleep(0.01)
+# print("Done!!")
 
+## 17
+## Here's an example of using separate if statements,
+## that is, a case where you would NOT want to use elif:
+# name = input("What is your name? (type it lowercase please.)")
+# print("Ok, let me look up that name...")
+# if name.startswith("z"):
+#     print("Your name starts with a Z. That is somewhat uncommon in English.")
+# if len(name) < 3:
+#     print("Your name is less than 3 characters long.")
+# if len(name) > 9:
+#     print("Your name is more than 9 characters long.")
+# if name == "":
+#     print("Your name is empty!")
 
-number = ""
-while True:
-    number = input("Please select any number! ")
-    user_input = input("Are you sure about that number? (yes/no): ")
-
-#Yes data    
-    if user_input.lower() in ["yes", "y"]:
-        number2 = input("Type your number again to confirm... ")  
-        if number == number2:
-            delay_print(f"Thank you for confirming the number, {number2}.\n")
-        if number != number2:
-            delay_print("Why you always lying? \n")
-        break
-
-#No Data
-    elif user_input.lower() in ["no", "n"]:
-        number3 = input("What would you like your new number to be? ")
-        number3confirm = input("Can you confirm what your new number will be? ")
-        if number3 == number3confirm:
-            delay_print(f"Thank you for confirming, {number3}\n")
-        if number3 != number3confirm:
-            delay_print(f"The number you have input does not match the previous number you entered, Try Again!! \n")
-            continue
-
-#Invalid response
-    else:
-        print("Invalid input. Please enter yes/no.")
-
+###########################################################
+###########################################################
 
 
